@@ -1,1 +1,4 @@
 # DiabetesDetection
+
+
+install requirements
