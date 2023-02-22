@@ -1,0 +1,59 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
+
+<div class="content">
+
+  <form action=" "method="post">
+      
+      <p align="center" style="font-size:2rem;font-weight: 500; padding-top: 2rem; padding-bottom: 5rem; color: aqua;"> Diabetes Detection System</p>
+
+      <div class="d_form_set" style="margin-left: 35%;">
+         
+
+          <div class="form-group">
+              <label for="glucose">Glucose Levels</label><br>
+              <input type="text" id="lname" name="glucose" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
+          </div>
+
+          <div class="form-group">
+              <label for="bp">Blood Pressure</label><br>
+              <input type="text" id="lname" name="bp" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
+          </div>
+
+          <div class="form-group">
+              <label for="skinthickness">Skin Thickness</label><br>
+              <input type="text" id="lname" name="skinthickness" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
+ 
+          </div>
+          <div class="form-group">
+              <label for="bmi">BMI</label><br>
+              <input type="text" id="lname" name="bmi" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
+ 
+          </div>
+
+          <div class="form-group">
+              <label for="insulin">Insulin Levels</label><br>
+              <input type="text" id="lname" name="insulin" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
+ 
+          </div>
+          <div class="form-group">
+              <label for="dpfunc">Diabetes Pedigree Function</label><br>
+              <input type="text" id="lname" name="dpfunc" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
+ 
+          </div>
+          <div class="form-group">
+              <label for="age">Age </label><br>
+              <input type="text" id="lname" name="age" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
+ 
+          </div>          
+      </div>
+      <div class="buttns" align="center">
+          <input type="submit" id="submit">
+          <a id="submit" href="">Go Back</a>
+
+      </div>
+
+  </form>
+</div>
+ 
+{% endblock %}
+    
