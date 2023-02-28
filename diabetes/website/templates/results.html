@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+    <h1>Results</h1>
+    {% if pred %}
+        <p>{{ pred }}</p>
+    {% else %}
+        <p>No prediction was made.</p>
+    {% endif %}
+{% endblock %}
