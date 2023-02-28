@@ -1,16 +1,14 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
-from . import db   ##means from __init__.py import db
+from . import db  # means from __init__.py import db
 from flask_login import login_user, login_required, logout_user, current_user
 import pandas as pd
+from sklearn.linear_model import LogisticRegression
 import pickle
-
+import os
 
 auth = Blueprint('auth', __name__)
-
-# model = pickle.load(open("Diabetes.pkl", "rb"))
-
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -69,23 +67,3 @@ def sign_up():
 
     return render_template("sign_up.html", user=current_user)
 
-# @auth.route('/predict',methods=['POST','GET'])
-# def predict():
-#     text1 = request.form['1']
-#     text2 = request.form['2']
-#     text3 = request.form['3']
-#     text4 = request.form['4']
-#     text5 = request.form['5']
-#     text6 = request.form['6']
-#     text7 = request.form['7']
-#     text8 = request.form['8']
- 
-#     row_df = pd.DataFrame([pd.Series([text1,text2,text3,text4,text5,text6,text7,text8])])
-#     print(row_df)
-#     prediction=model.predict_proba(row_df)
-#     output='{0:.{1}f}'.format(prediction[0][1], 2)
-#     output = str(float(output)*100)+'%'
-#     if output>str(0.5):
-#         return render_template('result.html',pred=f'You have chance of having diabetes.\nProbability of having Diabetes is {output}')
-#     else:
-#         return render_template('result.html',pred=f'You are safe.\n Probability of having diabetes is {output}')
