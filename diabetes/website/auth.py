@@ -3,10 +3,7 @@ from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db  # means from __init__.py import db
 from flask_login import login_user, login_required, logout_user, current_user
-import pandas as pd
-from sklearn.linear_model import LogisticRegression
-import pickle
-import os
+
 
 auth = Blueprint('auth', __name__)
 
