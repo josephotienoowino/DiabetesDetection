@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Results</h1>
+    <h1 style="margin-left: 45%; font-weight: bold;">Results</h1>
     {% if pred %}
-        <p>{{ pred }}</p>
+        <p style="padding-top: 50px; margin-left: 45%; font-weight: bold;">{{ pred }}</p>
+    </div>
     {% else %}
-        <p>No prediction was made.</p>
+        <p style="padding-top: 50px; margin-left: 45%; font-weight: bold;">No prediction was made.</p>
     {% endif %}
 {% endblock %}

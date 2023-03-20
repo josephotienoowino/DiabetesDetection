@@ -1,59 +1,75 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
 
-<div class="content">
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+     <!-- <h5 style="text-align: center; color: brown; font-weight: 600;">{{dect}}</h5> -->
+     <h5 style="text-align: center; color: brown; font-weight: 600;">{{pred}}</h5>
+      <h1 style="margin-left: 35%; color: aqua; font-weight: bold;" >Diabetes Detection Portal</h1><br>
 
-  <form action=" "method="post">
-      
-      <p align="center" style="font-size:2rem;font-weight: 500; padding-top: 2rem; padding-bottom: 5rem; color: aqua;"> Diabetes Detection System</p>
+      <!-- <div class="row center">
+        <h5 align=" center" style="color: aqua; margin-left: 35%;">Detect the Presences of having Diabetes
+        <br>
+        </h5>
+      </div> -->
 
-      <div class="d_form_set" style="margin-left: 35%;">
-         
 
-          <div class="form-group">
-              <label for="glucose">Glucose Levels</label><br>
-              <input type="text" id="lname" name="glucose" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
+      <div class="row">
+        <form action='/predict' method="post" class="col s12">
+            <div class="row" align="center" style="margin-top: 10%;">
+              <div class="input-field col s4">
+                <label for="first_name"><b>Gravidity</b></label>
+                <br>
+                <input placeholder="No. of Pregnancies" name="1" id="first_name" type="text" class="validate">
+            </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Glucose(mg/dL) </b></label>
+                    <br>
+                    <input id="last_name" name="2" placeholder="Glucose level in sugar"  type="text" class="validate" style="margin-left: 5%;"> <br>
+    
+                </div>
+    
+                <div class="input-field col s4">
+                    <label for="_name"><b>Blood Pressure</b></label>
+                    <br>
+                    <input id="_name" name="3" placeholder="BloodPressure" type="text" class="validate"><br>
+    
+                </div>
+                <div class="input-field col s4">
+                    <label for="first_name"><b>Skin Turgor</b></label>
+                    <br>
+                    <input placeholder="SkinThickness" name="4" id="first_name" type="text" class="validate"><br>
+                </div>
+                <div class="input-field col s4" style="padding-top: 20px; color: rgb(2, 55, 55);">
+                    <label for="last_name"><b>Insulin</b></label>
+                    <br>
+                    <input id="last_name" name="5" placeholder="Insulin level"  type="text" class="validate"><br>
+                </div>
+                <div class="input-field col s4" style="padding-top: 20px; color: rgb(2, 55, 55);">
+                  <label ><b>BMI</b></label>
+                  <br>
+                  <input name = '6' placeholder="Body Mass Index" style="margin-left: 1%;"><br>
+
+                </div>
+                <div class="input-field col s4" style="padding-top: 20px; color: rgb(2, 55, 55);">
+                  <label for="last_name"><b>DiabetesPedigreeFunction</b></label>
+                  <br>
+                  <input id="last_name" name="7" placeholder="DiabetesPedigreeFunction"  type="text" class="validate">
+              </div>
+                <div class="input-field col s4" style="padding-top: 20px; color: rgb(2, 55, 55);">
+                    <label for="_name"><b>Age</b></label>
+                    <br>
+                    <input id="_name" name="8" placeholder="Age" type="text" class="validate"><br><br>
+                </div>
+                
           </div>
+    
+          <div class="row center">
+    
+            <button type="submit" class="btn-large waves-effect waves-light orange" style="margin-left: 40%; margin-top: 5%; color: rgb(133, 133, 230);">Detect Probability</button>
 
-          <div class="form-group">
-              <label for="bp">Blood Pressure</label><br>
-              <input type="text" id="lname" name="bp" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
           </div>
-
-          <div class="form-group">
-              <label for="skinthickness">Skin Thickness</label><br>
-              <input type="text" id="lname" name="skinthickness" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
- 
-          </div>
-          <div class="form-group">
-              <label for="bmi">BMI</label><br>
-              <input type="text" id="lname" name="bmi" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
- 
-          </div>
-
-          <div class="form-group">
-              <label for="insulin">Insulin Levels</label><br>
-              <input type="text" id="lname" name="insulin" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
- 
-          </div>
-          <div class="form-group">
-              <label for="dpfunc">Diabetes Pedigree Function</label><br>
-              <input type="text" id="lname" name="dpfunc" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
- 
-          </div>
-          <div class="form-group">
-              <label for="age">Age </label><br>
-              <input type="text" id="lname" name="age" value="" pattern="^-?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)$">
- 
-          </div>          
-      </div>
-      <div class="buttns" align="center">
-          <input type="submit" id="submit">
-          <a id="submit" href="">Go Back</a>
-
-      </div>
-
-  </form>
-</div>
+        </form>
+  </div>
  
 {% endblock %}
     
